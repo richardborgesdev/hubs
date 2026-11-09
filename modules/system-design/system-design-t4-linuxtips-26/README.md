@@ -12,4 +12,9 @@
 6. dns (domain name service)
 7. dhcp (dynamic host configuration protocol)
 8. http/1.*, http/2 e http/3
-9.
+9. tempo de resposta
+10. artigo
+
+# módulo 2: storage, raid e i/o
+11. storage em arquitetura de sistemas
+12.
