@@ -17,4 +17,17 @@
 
 # módulo 2: storage, raid e i/o
 11. storage em arquitetura de sistemas
-12.
+12. throughput, bandwidth, iops
+13. direct-attached storage
+14. network-attached storage
+15. block storage
+16. file storage
+17. object storage
+18. raid 0 (stripping)
+19. raid 1 (mirroring)
+20. raid 5 (striping com paridade distribuida)
+21. raid 6 (striping com dupla paridade)
+22. raid 10 (raid 0+1)
+23. resumo e comparativos de raid
+
+# módulo 3:
