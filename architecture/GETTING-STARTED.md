@@ -56,7 +56,7 @@ Welcome to Architecture Hub! This guide will help you navigate the learning reso
 ## 📚 Documentation Structure
 
 ```
-architecture-hub/
+architecture/
 ├── frontend/              # Frontend-specific guides
 │   ├── fundamentals.md    # Start here!
 │   ├── component-architecture.md
