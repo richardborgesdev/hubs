@@ -9,7 +9,7 @@ Course projects with their own code (e.g. `react-19-academind-*`, `flutter-cod3r
 | [staff](./staff) | Staff Engineer with frontend focus: responsibilities, archetypes, certifications | ✅ migrated from [staff-hub](https://github.com/richardborgesdev/staff-hub) |
 | [system-design](./system-design) | System design courses ([System Design T4 · LINUXtips · 2026](./system-design/system-design-t4-linuxtips-26)) | ✅ |
 | [architecture](./architecture) | Software and frontend architecture, design patterns, courses | ✅ migrated from [architecture-hub](https://github.com/richardborgesdev/architecture-hub) |
-| cloud | Cloud fundamentals and certifications | ⏳ coming from [cloud-hub](https://github.com/richardborgesdev/cloud-hub) |
+| [cloud](./cloud) | Cloud fundamentals and certifications ([AWS Cloud Practitioner CLF-C02](./cloud/AWS-Certified-Cloud-Practitioner-CLF-C02-2026)) | ✅ migrated from [cloud-hub](https://github.com/richardborgesdev/cloud-hub) |
 | web | Web development courses and references | ⏳ coming from [web-hub](https://github.com/richardborgesdev/web-hub) |
 | mobile | Mobile development courses and references | ⏳ coming from [mobile-hub](https://github.com/richardborgesdev/mobile-hub) |
 | design | Design references | ⏳ coming from [design-hub](https://github.com/richardborgesdev/design-hub) |
