@@ -11,9 +11,9 @@ Course projects with their own code (e.g. `react-19-academind-*`, `flutter-cod3r
 | [architecture](./architecture) | Software and frontend architecture, design patterns, courses | ✅ migrated from [architecture-hub](https://github.com/richardborgesdev/architecture-hub) |
 | [cloud](./cloud) | Cloud fundamentals and certifications ([AWS Cloud Practitioner CLF-C02](./cloud/AWS-Certified-Cloud-Practitioner-CLF-C02-2026)) | ✅ migrated from [cloud-hub](https://github.com/richardborgesdev/cloud-hub) |
 | [web](./web) | Web development courses (React, Vue, TypeScript, JavaScript), demos and references | ✅ migrated from [web-hub](https://github.com/richardborgesdev/web-hub) |
-| mobile | Mobile development courses and references | ⏳ coming from [mobile-hub](https://github.com/richardborgesdev/mobile-hub) |
-| design | Design references | ⏳ coming from [design-hub](https://github.com/richardborgesdev/design-hub) |
-| games | Game development references | ⏳ coming from [games-hub](https://github.com/richardborgesdev/games-hub) |
+| [mobile](./mobile) | Mobile development courses (Flutter, React Native) and references | ✅ migrated from [mobile-hub](https://github.com/richardborgesdev/mobile-hub) |
+| [design](./design) | Design references | ✅ migrated from [design-hub](https://github.com/richardborgesdev/design-hub) |
+| [games](./games) | Game development references (empty for now) | ✅ migrated from [games-hub](https://github.com/richardborgesdev/games-hub) |
 | english | English studies, goals and progress | ⏳ coming from [english-hub](https://github.com/richardborgesdev/english-hub) |
 | study | Notes on AI, DSA, library and certificates | ⏳ coming from [study-hub](https://github.com/richardborgesdev/study-hub) |
 | backend | Backend fundamentals: databases, caching, messaging | 🆕 planned |
