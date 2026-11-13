@@ -10,7 +10,7 @@ Course projects with their own code (e.g. `react-19-academind-*`, `flutter-cod3r
 | [system-design](./system-design) | System design courses ([System Design T4 · LINUXtips · 2026](./system-design/system-design-t4-linuxtips-26)) | ✅ |
 | [architecture](./architecture) | Software and frontend architecture, design patterns, courses | ✅ migrated from [architecture-hub](https://github.com/richardborgesdev/architecture-hub) |
 | [cloud](./cloud) | Cloud fundamentals and certifications ([AWS Cloud Practitioner CLF-C02](./cloud/AWS-Certified-Cloud-Practitioner-CLF-C02-2026)) | ✅ migrated from [cloud-hub](https://github.com/richardborgesdev/cloud-hub) |
-| web | Web development courses and references | ⏳ coming from [web-hub](https://github.com/richardborgesdev/web-hub) |
+| [web](./web) | Web development courses (React, Vue, TypeScript, JavaScript), demos and references | ✅ migrated from [web-hub](https://github.com/richardborgesdev/web-hub) |
 | mobile | Mobile development courses and references | ⏳ coming from [mobile-hub](https://github.com/richardborgesdev/mobile-hub) |
 | design | Design references | ⏳ coming from [design-hub](https://github.com/richardborgesdev/design-hub) |
 | games | Game development references | ⏳ coming from [games-hub](https://github.com/richardborgesdev/games-hub) |
