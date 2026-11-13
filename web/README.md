@@ -15,6 +15,12 @@
 1. [react-19-academind-quiz-app-2025](https://github.com/richardborgesdev/react-19-academind-quiz-app-2025)
 1. [react-19-academind-optimization-techniques-2025](https://github.com/richardborgesdev/react-19-academind-optimization-techniques-2025)
 1. [react-19-academind-class-based-components-2025](https://github.com/richardborgesdev/react-19-academind-class-based-components-2025)
+1. [react-19-academind-http-requests-2025](https://github.com/richardborgesdev/react-19-academind-http-requests-2025)
+1. [react-19-academind-building-custom-react-hooks-2025](https://github.com/richardborgesdev/react-19-academind-building-custom-react-hooks-2025)
+1. [react-19-academind-working-with-forms-2025](https://github.com/richardborgesdev/react-19-academind-working-with-forms-2025)
+1. [react-19-academind-handling-forms-actions-2025](https://github.com/richardborgesdev/react-19-academind-handling-forms-actions-2025)
+1. [react-19-academind-handling-forms-actions-2-2025](https://github.com/richardborgesdev/react-19-academind-handling-forms-actions-2-2025)
+1. [react-19-academind-food-order-app-2025](https://github.com/richardborgesdev/react-19-academind-food-order-app-2025)
 
 ### [Cod3r | Curso Vue JS 2 - O Guia Completo (incl. Vue Router & Vuex)](https://www.udemy.com/course/vue-js-completo)
 1. [vue-2-cod3r-intro-2024](https://github.com/richardborgesdev/vue-2-cod3r-intro-2024)
@@ -25,6 +31,16 @@
 1. [vue-3-cod3r-monty-hall-2024](https://github.com/richardborgesdev/vue-3-cod3r-monty-hall-2024)
 1. [vue-3-cod3r-knowledge-2024](https://github.com/richardborgesdev/vue-3-cod3r-knowledge-2024)
 
+
+### [Academind | Understanding TypeScript](https://www.udemy.com/course/understanding-typescript/)
+1. [typescript-academind-2026](https://github.com/richardborgesdev/typescript-academind-2026)
+
+### Cod3r | JavaScript
+1. [javascript-cod3r-foundation-2023](https://github.com/richardborgesdev/javascript-cod3r-foundation-2023)
+
+### Demos
+1. [js-service-worker-demo-1](https://github.com/richardborgesdev/js-service-worker-demo-1)
+1. [shadcdn-demo-1](https://github.com/richardborgesdev/shadcdn-demo-1)
 
 ### [Free Code Camp](https://www.freecodecamp.org/learn)
 1. [free-code-camp](https://github.com/richardborgesdev/free-code-camp)
