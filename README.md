@@ -14,7 +14,7 @@ Course projects with their own code (e.g. `react-19-academind-*`, `flutter-cod3r
 | [mobile](./mobile) | Mobile development courses (Flutter, React Native) and references | ✅ migrated from [mobile-hub](https://github.com/richardborgesdev/mobile-hub) |
 | [design](./design) | Design references | ✅ migrated from [design-hub](https://github.com/richardborgesdev/design-hub) |
 | [games](./games) | Game development references (empty for now) | ✅ migrated from [games-hub](https://github.com/richardborgesdev/games-hub) |
-| english | English studies, goals and progress | ⏳ coming from [english-hub](https://github.com/richardborgesdev/english-hub) |
+| [english](./english) | English studies: goals, courses (Busuu, Cambly, grammar, pronunciation), cheat sheet and progress | ✅ migrated from [english-hub](https://github.com/richardborgesdev/english-hub) |
 | study | Notes on AI, DSA, library and certificates | ⏳ coming from [study-hub](https://github.com/richardborgesdev/study-hub) |
 | backend | Backend fundamentals: databases, caching, messaging | 🆕 planned |
 | infra | Containers, Kubernetes, observability | 🆕 planned |
