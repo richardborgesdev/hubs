@@ -12,6 +12,7 @@
 1. [flutter-cod3r-store-deploy](https://github.com/richardborgesdev/flutter-cod3r-store-deploy)
 1. [flutter-cod3r-minesweeper](https://github.com/richardborgesdev/flutter-cod3r-minesweeper)
 1. [flutter-cod3r-calculator](https://github.com/richardborgesdev/flutter-cod3r-calculator)
+1. [flutter-cod3r-pomodoro](https://github.com/richardborgesdev/flutter-cod3r-pomodoro)
 1. [flutter-cod3r-dart-fundamentals](https://github.com/richardborgesdev/flutter-cod3r-dart-fundamentals)
 
 ## Persons
