@@ -30,4 +30,6 @@
 22. raid 10 (raid 0+1)
 23. resumo e comparativos de raid
 
-# módulo 3:
+# módulo 3: teorema cap, acid, base e pacelc
+24. teorema cap
+25.
