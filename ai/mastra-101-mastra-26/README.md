@@ -9,14 +9,14 @@ Hands-on project for [Mastra 101](https://mastra.ai/course), the free course by 
 - [ ] 4. Building workflows: steps, creating your first step
 
 ## Setup
-1. `cp .env.example .env` and set `OPENAI_API_KEY`.
+1. `cp .env.example .env` and set `GOOGLE_GENERATIVE_AI_API_KEY` (free key from [Google AI Studio](https://aistudio.google.com/apikey)).
 2. `npm run dev` and open Mastra Studio at http://localhost:4111.
 3. Open Claude Code **in this folder** and approve the `mastra` MCP server from `.mcp.json` (check it with `/mcp`).
 4. Ask the agent: `start the Mastra course`. It calls `startMastraCourse` and registers your email on the first run.
 
 Course MCP tools: `startMastraCourse`, `getMastraCourseStatus`, `startMastraCourseLesson`, `nextMastraCourseStep`, `clearMastraCourseHistory`.
 
-Scaffolded on 2026-11-16 with `npx create-mastra@latest mastra-101-mastra-26 --llm openai --no-git` (Node >= 22.13). The course site only lists Cursor, Windsurf and VS Code; for Claude Code the equivalent is the `.mcp.json` above.
+Scaffolded on 2026-11-16 with `npx create-mastra@latest mastra-101-mastra-26 --llm openai --no-git` (Node >= 22.13). On 2026-11-17 the models were switched from OpenAI to Gemini (`google/gemini-3.8-flash` for the agent, `google/gemini-3.5-flash-lite` for memory) to use the free tier; to go back, change the two `model` strings in `src/mastra/agents/agent.ts` and the variable in `.env`. The course site only lists Cursor, Windsurf and VS Code; for Claude Code the equivalent is the `.mcp.json` above.
 
 ---
 
