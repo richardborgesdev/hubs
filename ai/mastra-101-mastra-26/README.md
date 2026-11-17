@@ -3,10 +3,26 @@
 Hands-on project for [Mastra 101](https://mastra.ai/course), the free course by Mastra. The course is led by an MCP agent inside the editor: the `mastra` MCP server (configured in [`.mcp.json`](./.mcp.json)) exposes the course tools, and the coding agent walks you through each lesson writing code in this project.
 
 ## Lessons
-- [ ] 1. Build your first agent: what Mastra is, verifying the installation
+- [x] 1. Build your first agent: what Mastra is, verifying the installation (2026-11-17)
 - [ ] 2. Adding tools and MCP: what MCP is, installing it, MCP configuration
 - [ ] 3. Adding memory: why memory matters, installing it
 - [ ] 4. Building workflows: steps, creating your first step
+
+## Notes
+### Lesson 1: Build your first agent
+Built `financialAgent` ([`agents/financial-agent.ts`](./src/mastra/agents/financial-agent.ts)): a system prompt with role, capabilities, guidelines, constraints and success criteria; the `get-transactions` tool ([`tools/get-transactions-tool.ts`](./src/mastra/tools/get-transactions-tool.ts)), which reads a public Google Sheet as CSV; and memory with `Memory` + `LibSQLStore`.
+
+Differences from the course code:
+- Current Mastra requires an `id` on every `Agent`.
+- `model` is `google/gemini-3.5-flash-lite` instead of `openai/gpt-5.4`.
+- The tool throws when the sheet request fails, instead of handing an HTML error page to the agent as CSV.
+- `mastra dev` runs from `src/mastra/public`, so a relative `file:` URL puts the database in the public folder. `MASTRA_DB_URL` in `.env` holds an absolute path.
+
+Takeaways:
+- The model decides when to call a tool from its `description`; on follow-up questions the agent answered from memory without calling the tool again.
+- LLMs are unreliable at arithmetic: the agent got totals wrong by $0.01. For numbers that matter, compute them in the tool and return the result.
+- The agent does not know today's date, so "this month" became the last month in the data. Pass the date in the instructions when it matters.
+- Memory keeps misunderstandings too: an ambiguous first answer carried into the follow-up questions.
 
 ## Setup
 1. `cp .env.example .env` and set `GOOGLE_GENERATIVE_AI_API_KEY` (free key from [Google AI Studio](https://aistudio.google.com/apikey)).
@@ -16,7 +32,7 @@ Hands-on project for [Mastra 101](https://mastra.ai/course), the free course by 
 
 Course MCP tools: `startMastraCourse`, `getMastraCourseStatus`, `startMastraCourseLesson`, `nextMastraCourseStep`, `clearMastraCourseHistory`.
 
-Scaffolded on 2026-11-16 with `npx create-mastra@latest mastra-101-mastra-26 --llm openai --no-git` (Node >= 22.13). On 2026-11-17 the models were switched from OpenAI to Gemini (`google/gemini-3.8-flash` for the agent, `google/gemini-3.5-flash-lite` for memory) to use the free tier; to go back, change the two `model` strings in `src/mastra/agents/agent.ts` and the variable in `.env`. The course site only lists Cursor, Windsurf and VS Code; for Claude Code the equivalent is the `.mcp.json` above.
+Scaffolded on 2026-11-16 with `npx create-mastra@latest mastra-101-mastra-26 --llm openai --no-git` (Node >= 22.13). On 2026-11-17 the models were switched from OpenAI to Gemini to use the free tier: `google/gemini-3.5-flash-lite` for the agent and for memory (15 RPM and 500 requests/day on the free tier, against 20/day for `gemini-3.8-flash`). The template's `web_search` tool is disabled because the free tier has 0 Google Search grounding quota for Gemini 3+, which made every request fail with 429. To go back to OpenAI, change the two `model` strings in `src/mastra/agents/agent.ts`, re-enable `web_search` and set `OPENAI_API_KEY` in `.env`. The course site only lists Cursor, Windsurf and VS Code; for Claude Code the equivalent is the `.mcp.json` above.
 
 ---
 
