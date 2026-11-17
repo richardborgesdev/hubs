@@ -12,3 +12,6 @@ src/mastra/public/
 .vercel
 *.duckdb
 *.duckdb.wal
+
+# Notes written by the agent (filesystem MCP server)
+notes/

@@ -4,7 +4,7 @@ Hands-on project for [Mastra 101](https://mastra.ai/course), the free course by 
 
 ## Lessons
 - [x] 1. Build your first agent: what Mastra is, verifying the installation (2026-11-17)
-- [ ] 2. Adding tools and MCP: what MCP is, installing it, MCP configuration
+- [x] 2. Adding tools and MCP: what MCP is, installing it, MCP configuration (2026-11-17)
 - [ ] 3. Adding memory: why memory matters, installing it
 - [ ] 4. Building workflows: steps, creating your first step
 
@@ -23,6 +23,30 @@ Takeaways:
 - LLMs are unreliable at arithmetic: the agent got totals wrong by $0.01. For numbers that matter, compute them in the tool and return the result.
 - The agent does not know today's date, so "this month" became the last month in the data. Pass the date in the instructions when it matters.
 - Memory keeps misunderstandings too: an ambiguous first answer carried into the follow-up questions.
+
+### Lesson 2: Adding tools and MCP
+Built `personalAssistantAgent` ([`agents/personal-assistant-agent.ts`](./src/mastra/agents/personal-assistant-agent.ts)): an `MCPClient` whose `listTools()` feeds the agent, plus memory with history, semantic recall and working memory. Each server only connects when its variables are in `.env` (see [`.env.example`](./.env.example)).
+
+| Server | Transport | Status |
+|---|---|---|
+| Zapier (Gmail) | HTTP + API key | Code ready, not configured (needs a Zapier account) |
+| GitHub | HTTP + fine-grained PAT | Read-only endpoint `/mcp/readonly`: 27 tools instead of 45 |
+| Hacker News | stdio (`npx`) | Third-party package, code reviewed and version pinned |
+| Filesystem | stdio (`npx`) | Official server, limited to `notes/` (git-ignored) |
+
+Differences from the course code:
+- `new URL(process.env.X || '')` does not prevent a crash: `new URL('')` throws `Invalid URL`. Servers are added conditionally instead.
+- Instructions only describe tool groups whose server is connected, and `instructions` is a function that adds today's date.
+- `memory` is defined (the course uses it without declaring it); the embedder is `google/gemini-embedding-001` and the vector store path comes from `MASTRA_VECTOR_DB_URL`.
+- `npx` instead of `pnpx`, and pinned package versions.
+
+Takeaways:
+- MCP solves "how to call" a tool (name, description, schema come from the server); "when and why" is still the prompt's job.
+- A prompt that mentions tools the agent does not have makes it pretend to use them.
+- The agent only knows what is in the prompt or in tool results: it picked `Hubs-Foundation/hubs` until told to resolve "my repo" with `github_get_me`.
+- Every connected tool costs tokens on every call (about 18k input tokens for a simple question with 36 tools), and large tool results (a story with ~950 comments) blew the free tier limit of 250k input tokens per minute.
+- Give the model only the tools it needs, and enforce limits outside the model: the filesystem server rejected `/etc/hosts` and `notes/../.env` even when called directly.
+- Working memory is per user (`resource`), so the profile showed up in a new thread; message history is per thread.
 
 ## Setup
 1. `cp .env.example .env` and set `GOOGLE_GENERATIVE_AI_API_KEY` (free key from [Google AI Studio](https://aistudio.google.com/apikey)).
