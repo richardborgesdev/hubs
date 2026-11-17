@@ -1,7 +1,7 @@
 import { pathToFileURL } from 'node:url';
 import { Agent } from '@mastra/core/agent';
 import { TaskSignalProvider } from '@mastra/core/signals';
-import { askUserTool, webFetchTool, webSearchTool } from '@mastra/core/tools';
+import { askUserTool, webFetchTool } from '@mastra/core/tools';
 import { LocalFilesystem, LocalSandbox, WORKSPACE_TOOLS, Workspace } from '@mastra/core/workspace';
 import { Memory } from '@mastra/memory';
 import { startScheduleTool, stopScheduleTool } from '../tools/schedule-tools';
@@ -52,7 +52,7 @@ Ask concise questions when something is unclear or a good question could surface
 
 For local file changes, end with a plain-text URL using ${pathToFileURL(`${workspacePath}/`).href}; avoid Markdown links, localhost, /workspace, relative paths, and static-file servers.
 `,
-  model: 'google/gemini-3.8-flash',
+  model: 'google/gemini-3.5-flash-lite',
   defaultOptions: {
     maxSteps: 100,
     autoResumeSuspendedTools: true,
@@ -71,7 +71,7 @@ For local file changes, end with a plain-text URL using ${pathToFileURL(`${works
     start_schedule: startScheduleTool,
     stop_schedule: stopScheduleTool,
     web_fetch: webFetchTool,
-    web_search: webSearchTool,
+    // web_search: webSearchTool, // Gemini 3+ free tier has 0 search grounding quota
   },
   signals: [new TaskSignalProvider()],
 });

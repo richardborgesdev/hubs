@@ -16,7 +16,7 @@ Hands-on project for [Mastra 101](https://mastra.ai/course), the free course by 
 
 Course MCP tools: `startMastraCourse`, `getMastraCourseStatus`, `startMastraCourseLesson`, `nextMastraCourseStep`, `clearMastraCourseHistory`.
 
-Scaffolded on 2026-11-16 with `npx create-mastra@latest mastra-101-mastra-26 --llm openai --no-git` (Node >= 22.13). On 2026-11-17 the models were switched from OpenAI to Gemini (`google/gemini-3.8-flash` for the agent, `google/gemini-3.5-flash-lite` for memory) to use the free tier; to go back, change the two `model` strings in `src/mastra/agents/agent.ts` and the variable in `.env`. The course site only lists Cursor, Windsurf and VS Code; for Claude Code the equivalent is the `.mcp.json` above.
+Scaffolded on 2026-11-16 with `npx create-mastra@latest mastra-101-mastra-26 --llm openai --no-git` (Node >= 22.13). On 2026-11-17 the models were switched from OpenAI to Gemini to use the free tier: `google/gemini-3.5-flash-lite` for the agent and for memory (15 RPM and 500 requests/day on the free tier, against 20/day for `gemini-3.8-flash`). The template's `web_search` tool is disabled because the free tier has 0 Google Search grounding quota for Gemini 3+, which made every request fail with 429. To go back to OpenAI, change the two `model` strings in `src/mastra/agents/agent.ts`, re-enable `web_search` and set `OPENAI_API_KEY` in `.env`. The course site only lists Cursor, Windsurf and VS Code; for Claude Code the equivalent is the `.mcp.json` above.
 
 ---
 
