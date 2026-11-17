@@ -3,10 +3,26 @@
 Hands-on project for [Mastra 101](https://mastra.ai/course), the free course by Mastra. The course is led by an MCP agent inside the editor: the `mastra` MCP server (configured in [`.mcp.json`](./.mcp.json)) exposes the course tools, and the coding agent walks you through each lesson writing code in this project.
 
 ## Lessons
-- [ ] 1. Build your first agent: what Mastra is, verifying the installation
+- [x] 1. Build your first agent: what Mastra is, verifying the installation (2026-11-17)
 - [ ] 2. Adding tools and MCP: what MCP is, installing it, MCP configuration
 - [ ] 3. Adding memory: why memory matters, installing it
 - [ ] 4. Building workflows: steps, creating your first step
+
+## Notes
+### Lesson 1: Build your first agent
+Built `financialAgent` ([`agents/financial-agent.ts`](./src/mastra/agents/financial-agent.ts)): a system prompt with role, capabilities, guidelines, constraints and success criteria; the `get-transactions` tool ([`tools/get-transactions-tool.ts`](./src/mastra/tools/get-transactions-tool.ts)), which reads a public Google Sheet as CSV; and memory with `Memory` + `LibSQLStore`.
+
+Differences from the course code:
+- Current Mastra requires an `id` on every `Agent`.
+- `model` is `google/gemini-3.5-flash-lite` instead of `openai/gpt-5.4`.
+- The tool throws when the sheet request fails, instead of handing an HTML error page to the agent as CSV.
+- `mastra dev` runs from `src/mastra/public`, so a relative `file:` URL puts the database in the public folder. `MASTRA_DB_URL` in `.env` holds an absolute path.
+
+Takeaways:
+- The model decides when to call a tool from its `description`; on follow-up questions the agent answered from memory without calling the tool again.
+- LLMs are unreliable at arithmetic: the agent got totals wrong by $0.01. For numbers that matter, compute them in the tool and return the result.
+- The agent does not know today's date, so "this month" became the last month in the data. Pass the date in the instructions when it matters.
+- Memory keeps misunderstandings too: an ambiguous first answer carried into the follow-up questions.
 
 ## Setup
 1. `cp .env.example .env` and set `GOOGLE_GENERATIVE_AI_API_KEY` (free key from [Google AI Studio](https://aistudio.google.com/apikey)).
