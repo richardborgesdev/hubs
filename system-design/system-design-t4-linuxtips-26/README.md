@@ -32,4 +32,5 @@
 
 # módulo 3: teorema cap, acid, base e pacelc
 24. teorema cap
-25.
+25. modelo acid - atomicity, consistency, isolation, durability
+26.
