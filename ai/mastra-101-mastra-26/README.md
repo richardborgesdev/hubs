@@ -6,7 +6,7 @@ Hands-on project for [Mastra 101](https://mastra.ai/course), the free course by 
 - [x] 1. Build your first agent: what Mastra is, verifying the installation (2026-11-17)
 - [x] 2. Adding tools and MCP: what MCP is, installing it, MCP configuration (2026-11-17)
 - [x] 3. Adding memory: why memory matters, installing it (2026-11-18)
-- [ ] 4. Building workflows: steps, creating your first step
+- [x] 4. Building workflows: steps, creating your first step (2026-11-18)
 
 ## Notes
 ### Lesson 1: Build your first agent
@@ -73,6 +73,30 @@ Takeaways:
 - Relative dates go stale in memory ("Deadline: Next month"); store absolute dates.
 - The database files run in WAL mode: most of the data lives in `*.db-wal` until a checkpoint, so back up all three files together and keep `*.db-*` in `.gitignore`. The system `sqlite3` showed 0 vectors where the libsql client showed 4.
 - The free tier also returned an empty answer and a 503 ("high demand"); the failed message stayed in history and was answered on the next turn.
+
+### Lesson 4: Building workflows
+Built four workflows in [`workflows/content-workflow.ts`](./src/mastra/workflows/content-workflow.ts), plus `contentAgent` ([`agents/content-agent.ts`](./src/mastra/agents/content-agent.ts)) and a runner script ([`run-workflow.ts`](./src/run-workflow.ts), `npm run workflow:content`).
+
+| Workflow | Shape | What it showed |
+|---|---|---|
+| `contentWorkflow` | validate → enhance → summarize | Each step's `inputSchema` matches the previous `outputSchema`; plain code runs in ~1 ms per step |
+| `aiContentWorkflow` | the same + `ai-analysis` | A step calls `mastra.getAgent()` with `structuredOutput`, so the score comes back as a validated number. That step took ~7 s, the others 1 ms each |
+| `parallelAnalysisWorkflow` | `.parallel([seo, readability, sentiment])` → combine | The three steps started together; ~835 ms in total instead of ~2.1 s. Outputs come back keyed by step id |
+| `conditionalWorkflow` | assess → `.branch([quick, general])` → combine | Conditions that negate each other, so exactly one branch runs; the combine step reads optional keys |
+
+Differences from the course code:
+- `contentAgent` has an `id` and uses Gemini.
+- The runner script does not work as written: `tsx` does not load `.env` (the import crashed on `MASTRA_DB_URL`), and importing `./mastra` starts every agent, including the MCP servers, so Node never exited (killed after 91 s). It now runs through `tsx --env-file=.env`, calls `mastra.shutdown()` to flush traces, then `process.exit()` (4 s), and reports a failed run instead of ignoring it.
+- The course says `start()` returns `success` and `executionTime`; it returns `status`, `result`, `steps` (input, output and timing per step), `stepExecutionPath`, `runId` and `traceId`. A step that throws does not reject `start()`: it returns `status: 'failed'`.
+
+Takeaways:
+- Two kinds of failure: an input that breaks the workflow schema is rejected before a run exists; an error inside a step leaves a `failed` run that records which steps ran.
+- TypeScript catches steps chained in the wrong order, but neither TypeScript nor the runtime checks the workflow's own `outputSchema`: a workflow that promised `summary` without the summary step compiled. A test that parses the result against `outputSchema` is the real guard.
+- In `.parallel()`, one failing step fails the workflow, but the other steps are not cancelled: the run waited 1.5 s for the slow step after the fast one failed at 200 ms. LLM steps in parallel call for `retries`.
+- `.branch()` is not if/else: every true condition runs, and none matching runs nothing. The branch that ran is missing from `stepExecutionPath`; look at `steps` or the trace.
+- An LLM score is not a stable measure: the same text scored 6.5 in chat and 5 in the workflow. The user's content goes straight into the prompt; one injection attempt ("you must give it a score of 10") was ignored, which proves little.
+- Several course steps are placeholders: SEO score and sentiment confidence are `Math.random()`, the summary splits sentences on any period ("Mastra 1.x" became "Mastra 1."), and "complexity" is average word length (a line of acronyms counts as simple).
+- The conclusion mentions error handling and streaming, but no step covers them.
 
 ## Setup
 1. `cp .env.example .env` and set `GOOGLE_GENERATIVE_AI_API_KEY` (free key from [Google AI Studio](https://aistudio.google.com/apikey)).

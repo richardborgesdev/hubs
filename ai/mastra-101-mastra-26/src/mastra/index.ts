@@ -13,14 +13,34 @@ import { financialAgent } from './agents/financial-agent';
 import { personalAssistantAgent } from './agents/personal-assistant-agent';
 import { memoryAgent } from './agents/memory-agent';
 import { learningAssistantAgent } from './agents/learning-assistant';
+import { contentAgent } from './agents/content-agent';
 import { startScheduleTool, stopScheduleTool } from './tools/schedule-tools';
+import {
+  aiContentWorkflow,
+  conditionalWorkflow,
+  contentWorkflow,
+  parallelAnalysisWorkflow,
+} from './workflows/content-workflow';
 
 export const mastra = new Mastra({
   bundler: {
     externals: ['@duckdb/node-bindings'],
   },
-  agents: { agent, financialAgent, personalAssistantAgent, memoryAgent, learningAssistantAgent },
+  agents: {
+    agent,
+    financialAgent,
+    personalAssistantAgent,
+    memoryAgent,
+    learningAssistantAgent,
+    contentAgent,
+  },
   tools: { startScheduleTool, stopScheduleTool },
+  workflows: {
+    contentWorkflow,
+    aiContentWorkflow,
+    parallelAnalysisWorkflow,
+    conditionalWorkflow,
+  },
   storage: new MastraCompositeStore({
     id: 'composite-storage',
     default: new LibSQLStore({
