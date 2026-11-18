@@ -5,7 +5,7 @@ Hands-on project for [Mastra 101](https://mastra.ai/course), the free course by 
 ## Lessons
 - [x] 1. Build your first agent: what Mastra is, verifying the installation (2026-11-17)
 - [x] 2. Adding tools and MCP: what MCP is, installing it, MCP configuration (2026-11-17)
-- [ ] 3. Adding memory: why memory matters, installing it
+- [x] 3. Adding memory: why memory matters, installing it (2026-11-18)
 - [ ] 4. Building workflows: steps, creating your first step
 
 ## Notes
@@ -47,6 +47,32 @@ Takeaways:
 - Every connected tool costs tokens on every call (about 18k input tokens for a simple question with 36 tools), and large tool results (a story with ~950 comments) blew the free tier limit of 250k input tokens per minute.
 - Give the model only the tools it needs, and enforce limits outside the model: the filesystem server rejected `/etc/hosts` and `notes/../.env` even when called directly.
 - Working memory is per user (`resource`), so the profile showed up in a new thread; message history is per thread.
+
+### Lesson 3: Adding memory
+Built `memoryAgent` ([`agents/memory-agent.ts`](./src/mastra/agents/memory-agent.ts)) step by step, from plain message history to semantic recall and working memory, and `learningAssistantAgent` ([`agents/learning-assistant.ts`](./src/mastra/agents/learning-assistant.ts)), which tracks topics, skill level and progress in a learner profile template. Every claim below was tested through the Studio API, usually with a control (a new thread, a 2-message window, recall turned off) so the result could only come from the feature under test.
+
+| Feature | What it keeps | Scope (default) | Who decides what goes in |
+|---|---|---|---|
+| `lastMessages` (default 10, set to 20) | Most recent messages | Thread | Automatic |
+| Semantic recall | Most similar messages, plus neighbours (`messageRange`) | Resource | Vector similarity |
+| Working memory | A block of facts, injected into every prompt | Resource | The model, through the `updateWorkingMemory` tool |
+
+Differences from the course code:
+- The template's own storage in [`index.ts`](./src/mastra/index.ts) also falls back to `MASTRA_DB_URL`, so the Studio and every agent share one database instead of a second one in `src/mastra/public`.
+- `LibSQLVector` takes an `id` (required in Mastra 1.x), the embedder is `google/gemini-embedding-001`, and `embeddingDimension: 3072` skips the probe embedding Memory makes on startup.
+- The course's `filter: { projectId: ... }` is left out: no thread has that metadata, so it matched nothing and silently disabled recall.
+- `learningAssistantAgent` gets today's date in its instructions, because its template asks for a "Started" date.
+
+Takeaways:
+- Without `thread` and `resource` the agent runs with no memory and no error, while still saying "I've made a note". In an app, `resource` must come from the authenticated session, never from the client.
+- A short window does not make the agent say "I don't know": with `lastMessages: 2` it confidently quoted the wrong "first message". Most of the course's tests fit in a 20-message window, so they do not prove recall; the 2-message test did ("30 minutes" of guitar was only found with recall on).
+- Semantic recall stores every message as a 3072-number vector and keeps the message text in plain text in the vector metadata. Similarity is about meaning, not dates: "last week" is not a filter.
+- Agents that share storage, vector store and `resource` share memory. `memoryAgent` knew the job I had told the Personal Assistant, and its working memory update rewrote the Personal Assistant's block in its own template, dropping fields (restored from a backup). Templates replace the whole block on every update; a schema merges fields.
+- Session state in a resource-scoped template leaks into every thread and makes the agent call `updateWorkingMemory` on almost every turn (11 of 12 in the final tests), which doubles the LLM calls.
+- Corrections update working memory (Toronto to Vancouver) but old messages in the vector store still say Toronto. Deleting a user's data means three places: `mastra_messages`, the vector store and `mastra_resources`.
+- Relative dates go stale in memory ("Deadline: Next month"); store absolute dates.
+- The database files run in WAL mode: most of the data lives in `*.db-wal` until a checkpoint, so back up all three files together and keep `*.db-*` in `.gitignore`. The system `sqlite3` showed 0 vectors where the libsql client showed 4.
+- The free tier also returned an empty answer and a 503 ("high demand"); the failed message stayed in history and was answered on the next turn.
 
 ## Setup
 1. `cp .env.example .env` and set `GOOGLE_GENERATIVE_AI_API_KEY` (free key from [Google AI Studio](https://aistudio.google.com/apikey)).
