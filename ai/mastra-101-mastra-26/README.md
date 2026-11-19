@@ -1,4 +1,5 @@
 # Mastra 101: AI Agent Builder Course · Mastra · 2026
+- [https://mastra.ai/course](https://mastra.ai/course)
 
 Hands-on project for [Mastra 101](https://mastra.ai/course), the free course by Mastra. The course is led by an MCP agent inside the editor: the `mastra` MCP server (configured in [`.mcp.json`](./.mcp.json)) exposes the course tools, and the coding agent walks you through each lesson writing code in this project.
 
