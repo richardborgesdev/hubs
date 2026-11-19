@@ -5,7 +5,7 @@
 1. what is an agent?
 2. run your first agent
 3. project structure
-4. create an agente
+4. create an agent
 
 ## tools
 5. create a tool
