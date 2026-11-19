@@ -4,6 +4,11 @@ A comprehensive learning resource for software architecture with a strong focus 
 
 ## 📚 Contents
 
+### Courses
+| Course | Provider | Status |
+|---|---|---|
+| [Fundamentals of Frontend Architecture](./frontend-at-scale-maxi-ferreira-fundamentals-of-frontend-architecture-26) | [Frontend at Scale](https://frontendatscale.com) · Maxi Ferreira | ✅ (2026-02-11) |
+
 ### Frontend Architecture
 - **[Frontend Fundamentals](./frontend/fundamentals.md)** - Core concepts and principles
 - **[Component Architecture](./frontend/component-architecture.md)** - Building scalable component systems

@@ -4,10 +4,10 @@
 Hands-on project for [Mastra 101](https://mastra.ai/course), the free course by Mastra. The course is led by an MCP agent inside the editor: the `mastra` MCP server (configured in [`.mcp.json`](./.mcp.json)) exposes the course tools, and the coding agent walks you through each lesson writing code in this project.
 
 ## Lessons
-- [x] 1. Build your first agent: what Mastra is, verifying the installation (2026-11-17)
-- [x] 2. Adding tools and MCP: what MCP is, installing it, MCP configuration (2026-11-17)
-- [x] 3. Adding memory: why memory matters, installing it (2026-11-18)
-- [x] 4. Building workflows: steps, creating your first step (2026-11-18)
+1. Build your first agent: what Mastra is, verifying the installation (2026-11-17)
+2. Adding tools and MCP: what MCP is, installing it, MCP configuration (2026-11-17)
+3. Adding memory: why memory matters, installing it (2026-11-18)
+4. Building workflows: steps, creating your first step (2026-11-18)
 
 ## Notes
 ### Lesson 1: Build your first agent

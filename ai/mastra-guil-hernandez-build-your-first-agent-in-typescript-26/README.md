@@ -1,5 +1,6 @@
 # Build Your First Agent in TypeScript | mastra | 2026
 - [https://mastra.ai/learn](https://mastra.ai/learn)
+- instructor: Guil Hernandez
 
 ## agents
 1. what is an agent?

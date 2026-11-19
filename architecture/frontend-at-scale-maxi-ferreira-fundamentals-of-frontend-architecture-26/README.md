@@ -1,5 +1,6 @@
-# Frontend At Scale: Fundamentals of Frontend Architecture
-[[course link]](https://frontendatscale.com/courses/frontend-architecture/foundations/introduction/)
+# Fundamentals of Frontend Architecture | frontend at scale | 2026
+- [https://frontendatscale.com/courses/frontend-architecture/foundations/introduction/](https://frontendatscale.com/courses/frontend-architecture/foundations/introduction/)
+- instructor: Maxi Ferreira
 
 ## 1. Foundations
 1. What's software architecture?
