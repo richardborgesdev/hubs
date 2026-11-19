@@ -1,5 +1,6 @@
 # system design t4 | linuxtips | 2026
 - [https://linuxtips.io/descomplicando-o-system-design/](https://linuxtips.io/descomplicando-o-system-design/)
+- instructor: Matheus Fidelis
 
 ## módulo 0: comece por aqui & aulas ao vivo anteriores
 0. comece por aqui! - aula introdutória

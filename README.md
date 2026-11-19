@@ -7,7 +7,7 @@ Course projects with their own code (e.g. `react-19-academind-*`, `flutter-cod3r
 | Area | What's inside | Status |
 |---|---|---|
 | [staff](./staff) | Staff Engineer with frontend focus: responsibilities, archetypes, certifications | ✅ migrated from [staff-hub](https://github.com/richardborgesdev/staff-hub) |
-| [system-design](./system-design) | System design courses ([System Design T4 · LINUXtips · 2026](./system-design/linuxtips-system-design-t4-26)) | ✅ |
+| [system-design](./system-design) | System design courses ([System Design T4 · LINUXtips · 2026](./system-design/linuxtips-matheus-fidelis-system-design-t4-26)) | ✅ |
 | [architecture](./architecture) | Software and frontend architecture, design patterns, courses | ✅ migrated from [architecture-hub](https://github.com/richardborgesdev/architecture-hub) |
 | [cloud](./cloud) | Cloud fundamentals and certifications ([AWS Cloud Practitioner CLF-C02](./cloud/udemy-stephane-maarek-aws-cloud-practitioner-clf-c02-26)) | ✅ migrated from [cloud-hub](https://github.com/richardborgesdev/cloud-hub) |
 | [web](./web) | Web development courses (React, Vue, TypeScript, JavaScript), demos and references | ✅ migrated from [web-hub](https://github.com/richardborgesdev/web-hub) |
