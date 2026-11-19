@@ -1,4 +1,6 @@
-# AWS Certified Cloud Practitioner CLF-C02 2026
+# AWS Certified Cloud Practitioner CLF-C02 | udemy | 2026
+- [https://www.udemy.com/course/aws-certified-cloud-practitioner-new/](https://www.udemy.com/course/aws-certified-cloud-practitioner-new/)
+- instructor: Stephane Maarek
 [[slides link]](https://courses.datacumulus.com/downloads/certified-cloud-practitioner-zb2/)
 
 ## Introduction

@@ -9,7 +9,7 @@ Course projects with their own code (e.g. `react-19-academind-*`, `flutter-cod3r
 | [staff](./staff) | Staff Engineer with frontend focus: responsibilities, archetypes, certifications | ✅ migrated from [staff-hub](https://github.com/richardborgesdev/staff-hub) |
 | [system-design](./system-design) | System design courses ([System Design T4 · LINUXtips · 2026](./system-design/linuxtips-system-design-t4-26)) | ✅ |
 | [architecture](./architecture) | Software and frontend architecture, design patterns, courses | ✅ migrated from [architecture-hub](https://github.com/richardborgesdev/architecture-hub) |
-| [cloud](./cloud) | Cloud fundamentals and certifications ([AWS Cloud Practitioner CLF-C02](./cloud/udemy-aws-cloud-practitioner-clf-c02-26)) | ✅ migrated from [cloud-hub](https://github.com/richardborgesdev/cloud-hub) |
+| [cloud](./cloud) | Cloud fundamentals and certifications ([AWS Cloud Practitioner CLF-C02](./cloud/udemy-stephane-maarek-aws-cloud-practitioner-clf-c02-26)) | ✅ migrated from [cloud-hub](https://github.com/richardborgesdev/cloud-hub) |
 | [web](./web) | Web development courses (React, Vue, TypeScript, JavaScript), demos and references | ✅ migrated from [web-hub](https://github.com/richardborgesdev/web-hub) |
 | [mobile](./mobile) | Mobile development courses (Flutter, React Native) and references | ✅ migrated from [mobile-hub](https://github.com/richardborgesdev/mobile-hub) |
 | [design](./design) | Design references | ✅ migrated from [design-hub](https://github.com/richardborgesdev/design-hub) |
@@ -24,5 +24,8 @@ Course projects with their own code (e.g. `react-19-academind-*`, `flutter-cod3r
 
 ## Conventions
 - Each area has a `README.md` that works as its index.
-- Courses go in `<area>/<provider>-<course>-<year>/` (e.g. `system-design/linuxtips-system-design-t4-26/`; when the course name already starts with the provider, it is not repeated, as in `ai/mastra-101-26/`) with a `README.md` listing the lessons as a checklist.
+- Courses go in `<area>/<provider>-<course>-<year>/`:
+  - With an instructor: `<area>/<provider>-<instructor>-<course>-<year>/` (e.g. `cloud/udemy-stephane-maarek-aws-cloud-practitioner-clf-c02-26/`).
+  - When the course name already starts with the provider, the provider is not repeated (e.g. `ai/mastra-101-26/`).
+  - The course `README.md` opens with the course link and the instructor, when there is one, and lists the lessons as a checklist.
 - Commits: `chore: <course or area> | <what was done>`.
