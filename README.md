@@ -27,5 +27,5 @@ Course projects with their own code (e.g. `react-19-academind-*`, `flutter-cod3r
 - Courses go in `<area>/<provider>-<course>-<year>/`:
   - With an instructor: `<area>/<provider>-<instructor>-<course>-<year>/` (e.g. `cloud/udemy-stephane-maarek-aws-cloud-practitioner-clf-c02-26/`).
   - When the course name already starts with the provider, the provider is not repeated (e.g. `ai/mastra-101-26/`).
-  - The course `README.md` opens with the course link and the instructor, when there is one, and lists the lessons as a checklist.
+  - The course `README.md` opens with the course link and the instructor, when there is one, and lists the lessons as a numbered list.
 - Commits: `chore: <course or area> | <what was done>`.
