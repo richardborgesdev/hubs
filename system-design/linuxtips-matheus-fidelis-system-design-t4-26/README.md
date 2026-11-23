@@ -35,4 +35,13 @@
 # módulo 3: teorema cap, acid, base e pacelc
 24. teorema cap
 25. modelo acid - atomicity, consistency, isolation, durability
-26.
+26. basic availability, soft-state, eventual consistency
+27. componentes do cap
+28. combinações do modelo cap - (cp, ap, ca)
+29. críticas modernas ao modelo cap
+30. teorema pacelc
+31. artigo pacelc
+32. artigo da aula
+
+# módulo 4: databases, modelos de dados e indexação
+33.
