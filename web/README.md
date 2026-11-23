@@ -23,6 +23,8 @@
 1. [react-19-academind-food-order-app-2025](https://github.com/richardborgesdev/react-19-academind-food-order-app-2025)
 
 ### [Cod3r | Curso Vue JS 2 - O Guia Completo (incl. Vue Router & Vuex)](https://www.udemy.com/course/vue-js-completo)
+[Certificate](https://udemy-certificate.s3.amazonaws.com/image/UC-7660de43-b876-4de0-9ef8-6339ac5f2725.jpg) (2024-12-18, 43h)
+
 1. [vue-2-cod3r-intro-2024](https://github.com/richardborgesdev/vue-2-cod3r-intro-2024)
 1. [vue-2-cod3r-monster-killer-2024](https://github.com/richardborgesdev/vue-2-cod3r-monster-killer-2024)
 1. [vue-2-cod3r-todo-list-2024](https://github.com/richardborgesdev/vue-2-cod3r-todo-list-2024)

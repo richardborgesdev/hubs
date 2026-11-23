@@ -1,5 +1,12 @@
 # Frontend Cloud Architecture: A Comprehensive Guide
 
+## Courses
+| Course | Provider | Status |
+|---|---|---|
+| [AWS Certified Cloud Practitioner CLF-C02](./udemy-stephane-maarek-aws-cloud-practitioner-clf-c02-26) | Udemy · Stephane Maarek | 🔄 in progress (2026) |
+| [AWS Partner: AWS Cloud Practitioner Essentials](./aws-partner-cloud-practitioner-essentials-23) | AWS Training & Certification | ✅ certificate (2023-10-10) |
+| [AWS Partner: Tailored (Intermediate+)](./aws-partner-tailored-intermediate-23) | AWS Training & Certification | ✅ certificate (2023-10-05) |
+
 ## Overview
 
 Frontend cloud architecture leverages cloud services to build, deploy, and scale modern web applications. This guide focuses on AWS and similar cloud platforms, examining how they support frontend development workflows, hosting, and optimization.
