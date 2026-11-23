@@ -2,6 +2,9 @@
 
 ## Repos
 
+### [Codenation | Aceleração Vue.js 2019](./codenation-aceleracao-vue-js-19)
+1. Weekly notes and exercises, in this repo
+
 ### [Academind | React - The Complete Guide 2024 (incl. Next.js, Redux)](https://www.udemy.com/course/react-the-complete-guide-incl-redux)
 1. [react-18-academind-getting-started-2024](https://github.com/richardborgesdev/react-18-academind-getting-started-2024)
 1. [react-18-academind-tic-tac-toe-2024](https://github.com/richardborgesdev/react-18-academind-tic-tac-toe-2024)

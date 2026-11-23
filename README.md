@@ -10,8 +10,8 @@ Course code lives here too, inside the course folder (e.g. [`ai/mastra-101-26`](
 | [system-design](./system-design) | System design courses ([System Design T4 · LINUXtips · 2026](./system-design/linuxtips-matheus-fidelis-system-design-t4-26)) | ✅ |
 | [architecture](./architecture) | Software and frontend architecture, design patterns, courses | ✅ migrated from [architecture-hub](https://github.com/richardborgesdev/architecture-hub) |
 | [cloud](./cloud) | Cloud fundamentals and certifications ([AWS Cloud Practitioner CLF-C02](./cloud/udemy-stephane-maarek-aws-cloud-practitioner-clf-c02-26)) | ✅ migrated from [cloud-hub](https://github.com/richardborgesdev/cloud-hub) |
-| [web](./web) | Web development courses (React, Vue, TypeScript, JavaScript), demos and references | ✅ migrated from [web-hub](https://github.com/richardborgesdev/web-hub) |
-| [mobile](./mobile) | Mobile development courses (Flutter, React Native) and references | ✅ migrated from [mobile-hub](https://github.com/richardborgesdev/mobile-hub) |
+| [web](./web) | Web development courses (React, Vue, TypeScript, JavaScript), demos and references | ✅ migrated from [web-hub](https://github.com/richardborgesdev/web-hub) and [study-hub](https://github.com/richardborgesdev/study-hub) |
+| [mobile](./mobile) | Mobile development courses (Flutter, Dart, React Native) and references | ✅ migrated from [mobile-hub](https://github.com/richardborgesdev/mobile-hub) and [study-hub](https://github.com/richardborgesdev/study-hub) |
 | [design](./design) | Design references | ✅ migrated from [design-hub](https://github.com/richardborgesdev/design-hub) |
 | [games](./games) | Game development references (empty for now) | ✅ migrated from [games-hub](https://github.com/richardborgesdev/games-hub) |
 | [english](./english) | English studies: goals, courses (Busuu, Cambly, grammar, pronunciation), cheat sheet and progress | ✅ migrated from [english-hub](https://github.com/richardborgesdev/english-hub) |
@@ -22,7 +22,6 @@ Course code lives here too, inside the course folder (e.g. [`ai/mastra-101-26`](
 | [career](./career) | CV versions and ideas for talks | ✅ migrated from [study-hub](https://github.com/richardborgesdev/study-hub) |
 | [finance](./finance) | Personal finance and accounting ([Contabilidade do Zero a Profissional · 2026](./finance/udemy-realiza-treinamentos-contabilidade-essencial-26)) | ✅ migrated from [study-hub](https://github.com/richardborgesdev/study-hub) |
 | [library](./library) | Links by topic: algorithms, career, articles, courses, books | ✅ migrated from [study-hub](https://github.com/richardborgesdev/study-hub) |
-| study | Course code still in study-hub (Flutter, Dart, Vue) | ⏳ coming from [study-hub](https://github.com/richardborgesdev/study-hub) |
 | infra | Containers, Kubernetes, observability | 🆕 planned |
 | go | Go language | 🆕 planned |
 
