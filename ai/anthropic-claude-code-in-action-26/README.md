@@ -1,63 +1,7 @@
-# AI
+# Claude Code in Action | anthropic | 2026
+- [https://anthropic.skilljar.com/claude-code-in-action](https://anthropic.skilljar.com/claude-code-in-action)
 
-## Claude Code 101
-
-# What is claue code?
-1. agentic tool
-1. access resources
-1. context window (working memory)
-1. permissions
-1. agentic loop
-1. compacting context
-
-### Your first prompt
-1. installing claude code
-    1. vs code extension
-1. claude desktop
-1. web
-1. auto-accept, approval, plan-mode
-
-### Daily workflows
-1. explore > plan > code > commit
-1. claude code chrome extension
-1. context window (compacting, /compact, /clear, /context)
-1. removing bias
-1. skills are better than mcps
-1. code reviews
-
-### Customizing Claude Code
-1. the claude.md file
-    1. levels (user, project)
-    1. add topics as memoires
-    1. keep it compact
-1. subagents
-    1. main context window x separete context window
-    1. create subagents
-1. skills
-    1. how todo something once
-    1. scripts, instructions
-    1. personal skills, project
-    1. loaded on demand
-    1. specialized context
-    1. repeated tasks
-1. MCP
-    1. external content
-    1. external actions
-    1. claude mcp add
-    1. scopping (local, user, project)
-1. Hooks
-    1. deterministic
-    1. run scripts
-    1. formatting
-    1. submit, pre, post, notification, stop
-
-### certificate
-![](../certificates/assets/claude-code-101.png)
-
-## Claude Code Course
-[[course link]](https://anthropic.skilljar.com/claude-code-in-action)
-
-### Introduction
+## Introduction
 1. coding assistant
 ![image](https://everpath-course-content.s3-accelerate.amazonaws.com/instructor%2Fa46l9irobhg0f5webscixp0bs%2Fpublic%2F1750967940%2F002_-_What_is_a_Coding_Assistant%3F_02.1750967940100.png)
 1. claude code in action
@@ -65,7 +9,7 @@
     1. use case: browsing in the internet to get benchmarks
     1. use case: use terraform files to view infrastructure (github integration)
 
-### Getting hands on
+## Getting hands on
 1. Claude setup
 1. Project setup
 1. Adding context
@@ -90,7 +34,7 @@
     1. /install-git-hub-app
     1. configure api
 
-### Hooks nad SDK
+## Hooks nad SDK
 1. /hooks to execute scripts in the project
     1. PreToolUse, PostToolUse
     1. matcher, type, command
@@ -116,5 +60,5 @@
     }
     ```
 
-### Certificate
-![claude code in action certificate](../certificates/assets/claude-code-in-action.png)
+## Certificate
+![claude code in action certificate](./certificate.png)
