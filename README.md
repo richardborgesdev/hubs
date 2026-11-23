@@ -1,7 +1,7 @@
 # hubs
 A repository to group all my study hubs: one folder per area, one subfolder per course.
 
-Course projects with their own code (e.g. `react-19-academind-*`, `flutter-cod3r-*`) stay in their own repositories and are linked from the area that owns them.
+Course code lives here too, inside the course folder (e.g. [`ai/mastra-101-26`](./ai/mastra-101-26)). Older course projects that already have their own repository (e.g. `react-19-academind-*`, `flutter-cod3r-*`) stay there and are linked from the area that owns them; one moves in only if the course is picked up again.
 
 ## Areas
 | Area | What's inside | Status |
@@ -18,13 +18,17 @@ Course projects with their own code (e.g. `react-19-academind-*`, `flutter-cod3r
 | [ai](./ai) | AI engineering: agents, MCP, memory, workflows, Claude Code ([Mastra 101 · 2026](./ai/mastra-101-26)) | ✅ partly migrated from [study-hub](https://github.com/richardborgesdev/study-hub) |
 | [algorithms](./algorithms) | Data structures, algorithms and interview practice (DSA patterns, LeetCode, Codility, HackerRank) | ✅ migrated from [study-hub](https://github.com/richardborgesdev/study-hub) |
 | [productivity](./productivity) | Productivity tools ([Notion Academy badges · 2026](./productivity/notion-academy-26)) | ✅ |
-| study | Remaining notes (Node, CV, talks, finance, library, certificates) to be split across areas | ⏳ coming from [study-hub](https://github.com/richardborgesdev/study-hub) |
-| backend | Backend fundamentals: databases, caching, messaging | 🆕 planned |
+| [backend](./backend) | Backend fundamentals: runtimes, APIs, databases, caching, messaging ([Node.js para Iniciantes · 2021](./backend/erick-wendel-nodejs-para-iniciantes-21)) | ✅ migrated from [study-hub](https://github.com/richardborgesdev/study-hub) |
+| [career](./career) | CV versions and ideas for talks | ✅ migrated from [study-hub](https://github.com/richardborgesdev/study-hub) |
+| [finance](./finance) | Personal finance and accounting ([Contabilidade do Zero a Profissional · 2026](./finance/udemy-realiza-treinamentos-contabilidade-essencial-26)) | ✅ migrated from [study-hub](https://github.com/richardborgesdev/study-hub) |
+| [library](./library) | Links by topic: algorithms, career, articles, courses, books | ✅ migrated from [study-hub](https://github.com/richardborgesdev/study-hub) |
+| study | Course code still in study-hub (Flutter, Dart, Vue) | ⏳ coming from [study-hub](https://github.com/richardborgesdev/study-hub) |
 | infra | Containers, Kubernetes, observability | 🆕 planned |
 | go | Go language | 🆕 planned |
 
 ## Conventions
 - Each area has a `README.md` that works as its index.
+- New courses, code included, go straight into the area folder instead of a separate repository. Dependencies, builds and `.env` files stay out of git (see `.gitignore`).
 - Courses go in `<area>/<provider>-<course>-<year>/`:
   - With an instructor: `<area>/<provider>-<instructor>-<course>-<year>/` (e.g. `cloud/udemy-stephane-maarek-aws-cloud-practitioner-clf-c02-26/`).
   - When the course name already starts with the provider, the provider is not repeated (e.g. `ai/mastra-101-26/`).

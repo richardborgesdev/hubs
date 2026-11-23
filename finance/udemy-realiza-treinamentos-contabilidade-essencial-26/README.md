@@ -8,7 +8,7 @@ Curso da Udemy: [Contabilidade do Zero a Profissional - ESSENCIAL](https://www.u
 - **Seções:** 13 | **Aulas:** 76
 
 ## Certificado
-![certificado-contabilidade-curso-1](../certificates/assets/certificado-contabilidade-curso-1.jpg)
+![certificado-contabilidade-curso-1](./certificate.jpg)
 
 ## Conteúdo
 
