@@ -44,4 +44,6 @@
 32. artigo da aula
 
 # módulo 4: databases, modelos de dados e indexação
-33.
+33. o que são banco de dados?
+34. tipos de banco de dados
+35.
