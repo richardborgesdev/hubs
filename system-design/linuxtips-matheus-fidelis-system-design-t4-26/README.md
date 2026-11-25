@@ -46,4 +46,9 @@
 # módulo 4: databases, modelos de dados e indexação
 33. o que são banco de dados?
 34. tipos de banco de dados
-35.
+35. niveis de consistência
+36. modelos orientados a tuplas (row-oriented)
+37. modelos orientados a documentos (document-oriented)
+38. modelos colunares (column-oriented)
+39. modelos chave-valor (key-value)
+40.
