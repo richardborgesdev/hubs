@@ -51,4 +51,14 @@
 37. modelos orientados a documentos (document-oriented)
 38. modelos colunares (column-oriented)
 39. modelos chave-valor (key-value)
-40.
+40. modelo de grafos
+41. page size e indexção colunar
+42. lsm-trees (log-structured merge-tree)
+42. indexação b-tree (árvores b)
+43. indexação por hashing
+44. indices invertidos (case elsticsearch)
+45. arquitetura write-intensive e read-intensive
+46. artigo da aula
+
+# módulo 5: estratégias de caching
+47.
